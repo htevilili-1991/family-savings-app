@@ -15,8 +15,6 @@ import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
 import { BookOpen, Folder, LayoutGrid, HandCoins } from 'lucide-react';
 import AppLogo from './app-logo';
-
-import { HandCoins } from 'lucide-react';
 const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
