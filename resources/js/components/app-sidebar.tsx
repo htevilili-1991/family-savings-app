@@ -13,14 +13,20 @@ import {
 import { dashboard } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid } from 'lucide-react';
+import { BookOpen, Folder, LayoutGrid, HandCoins } from 'lucide-react';
 import AppLogo from './app-logo';
 
+import { HandCoins } from 'lucide-react';
 const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
         href: dashboard(),
         icon: LayoutGrid,
+    },
+    {
+        title: 'Contributions',
+        href: route('contributions.index'),
+        icon: HandCoins,
     },
 ];
 
