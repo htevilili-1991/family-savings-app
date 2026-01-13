@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
 use App\Http\Controllers\ContributionController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return Inertia::render('welcome', [
@@ -26,6 +27,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
             ->name('contributions.update');
         Route::delete('contributions/{contribution}', [ContributionController::class, 'destroy'])
             ->name('contributions.destroy');
+    });
+
+    Route::middleware(['role:admin'])->group(function () {
+        Route::get('users', [UserController::class, 'index'])->name('users.index');
+        Route::post('users', [UserController::class, 'store'])->name('users.store');
     });
 });
 
