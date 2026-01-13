@@ -11,6 +11,7 @@ use Inertia\Inertia;
 
 class ContributionController extends Controller
 {
+    use \Illuminate\Foundation\Auth\Access\AuthorizesRequests;
     /**
      * Display a listing of the contributions.
      */
