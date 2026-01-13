@@ -1,9 +1,9 @@
 declare module 'ziggy-js' {
-    interface RouteParams {
-        [key: string]: any;
+    interface Ziggy {
+        namedRoutes: { [key: string]: any };
+        baseUrl: string;
+        baseProtocol: string;
+        baseDomain: string;
+        basePort: number | false;
     }
-
-    type Route = (name?: string, params?: RouteParams, absolute?: boolean) => string;
-
-    export const route: Route;
 }
