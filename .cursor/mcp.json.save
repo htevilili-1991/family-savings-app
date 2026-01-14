@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "laravel-boost": {
+      "command": "php",
+      "args": ["artisan", "boost:mcp"],
+      "cwd": "/home/htevilili/Documents/Personal/Savings and Loans Management System/savingsAndLoansManagementSystem/family-savings-app"
+    }
+  }
+}
