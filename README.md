@@ -3,12 +3,6 @@
 This document provides a comprehensive technical overview and setup guide for the Family Savings App, a modern web application built with Laravel, React, and Inertia.js.
 
 ## Screenshots
-<img width="1915" height="1156" alt="image" src="https://github.com/user-attachments/assets/ab55b92b-9191-41a7-882d-f4b6ae2c112c" />
-<img width="1915" height="1156" alt="image" src="https://github.com/user-attachments/assets/5b7d7f1c-ba61-4c83-b663-8b84e26cc712" />
-<img width="1915" height="1156" alt="image" src="https://github.com/user-attachments/assets/f3e6e248-445a-42d7-8e55-17b6c183b464" />
-<img width="1915" height="1156" alt="image" src="https://github.com/user-attachments/assets/2e0c1d5d-bc8c-474c-a81f-d56ce9095ceb" />
-<img width="1915" height="1156" alt="image" src="https://github.com/user-attachments/assets/84d05be5-3b29-4f8b-ab26-2b81c8b7bb88" />
-<img width="1915" height="1156" alt="image" src="https://github.com/user-attachments/assets/dbba3e5a-effa-494f-a745-98d5ffdd7073" />
 
 ## Table of Contents
 - [Project Overview](#project-overview)
