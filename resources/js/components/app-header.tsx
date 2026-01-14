@@ -29,11 +29,12 @@ import {
 import { UserMenuContent } from '@/components/user-menu-content';
 import { useInitials } from '@/hooks/use-initials';
 import { useActiveUrl } from '@/hooks/use-active-url';
+import { useAppearance } from '@/hooks/use-appearance';
 import { cn, toUrl } from '@/lib/utils';
 import { dashboard } from '@/routes';
 import { type BreadcrumbItem, type NavItem, type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid, Menu, Search } from 'lucide-react';
+import { BookOpen, Folder, LayoutGrid, Menu, Moon, Search, Sun } from 'lucide-react';
 import AppLogo from './app-logo';
 import AppLogoIcon from './app-logo-icon';
 
@@ -51,11 +52,6 @@ const rightNavItems: NavItem[] = [
         href: 'https://github.com/laravel/react-starter-kit',
         icon: Folder,
     },
-    {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits#react',
-        icon: BookOpen,
-    },
 ];
 
 const activeItemStyles =
@@ -70,6 +66,7 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
     const { auth } = page.props;
     const getInitials = useInitials();
     const { urlIsActive } = useActiveUrl();
+    const { resolvedAppearance, updateAppearance } = useAppearance();
     return (
         <>
             <div className="border-b border-sidebar-border/80">
@@ -225,6 +222,19 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                                 ))}
                             </div>
                         </div>
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-9 w-9"
+                            onClick={() => updateAppearance(resolvedAppearance === 'dark' ? 'light' : 'dark')}
+                        >
+                            {resolvedAppearance === 'dark' ? (
+                                <Sun className="h-5 w-5" />
+                            ) : (
+                                <Moon className="h-5 w-5" />
+                            )}
+                            <span className="sr-only">Toggle theme</span>
+                        </Button>
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
                                 <Button
